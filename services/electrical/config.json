@@ -1,0 +1,63 @@
+{
+  "slug": "electrical",
+  "title": "Electrical",
+  "lede": "Licensed commercial electrical service across Greater Atlanta — service work, project work, code-driven upgrades, and the kind of cross-trade coordination that only happens when your electrical contractor is on the same crew as your HVAC contractor.",
+  "metaDescription": "Commercial electrical service and project work from C2H — power distribution, lighting, switchgear, panel upgrades, generators, EV charging across Greater Atlanta.",
+  "canonicalUrl": "https://c2h.com/services/electrical",
+  "careersUrl": "https://firstcallmechanical.com/mechanical/careers",
+
+  "featuresEyebrow": "What we do",
+  "featuresHeading": "Commercial electrical, from the panel to the receptacle.",
+  "featuresLead": "Service work and project work for facilities that need an electrical contractor who shows up when promised and finishes what they start.",
+
+  "features": [
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10\"/></svg>",
+      "title": "Power distribution",
+      "body": "Service entrances, switchgear, transformers, panel upgrades, sub-panels, branch circuit work. New construction, retrofit, and emergency replacement."
+    },
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83\"/></svg>",
+      "title": "Commercial lighting",
+      "body": "LED retrofits, lighting controls, occupancy sensors, exterior and parking-lot lighting, emergency egress lighting and exit signs."
+    },
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18M9 21V9\"/></svg>",
+      "title": "Switchgear & motor control",
+      "body": "Switchgear service and replacement, motor control centers, VFDs and soft starters, equipment disconnects, code-required arc-flash labeling."
+    },
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\"/><path d=\"M9 9h6v6H9z\"/></svg>",
+      "title": "Generators & backup power",
+      "body": "Standby generator installation, automatic transfer switches, load-bank testing, annual exercise and load-bank verification, fuel system service."
+    },
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 11h14l2 6H3l2-6z\"/><path d=\"M7 11V5h10v6\"/><path d=\"M9 17v3M15 17v3\"/></svg>",
+      "title": "EV charging",
+      "body": "Level 2 and DC fast charging installation — load calcs, panel and feeder sizing, conduit runs, network commissioning, utility coordination."
+    },
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 3v18h18\"/><path d=\"M7 14l4-4 4 4 5-5\"/></svg>",
+      "title": "Code & compliance",
+      "body": "NEC code-driven upgrades, AHJ permit and inspection coordination, infrared scanning, arc-flash studies, GFCI/AFCI retrofits."
+    }
+  ],
+
+  "whyEyebrow": "Why C2H Electrical",
+  "whyHeading": "One contractor. HVAC, controls, electrical, plumbing.",
+  "whyParagraphs": [
+    "Most commercial facilities juggle three contractors for the work that should be one job: the HVAC company, the electrical company, and the controls company. They blame each other when something doesn't work; you pay for three trips.",
+    "C2H runs electrical in-house alongside HVAC and controls. The crew installing your new RTU is the same crew running the disconnect, the controls wire, and the power feed. One responsible party, one schedule, one invoice."
+  ],
+  "whyBullets": [
+    "Licensed master electricians on staff",
+    "Same crew as HVAC + controls — no inter-trade handoff",
+    "AHJ relationships across Gwinnett, Hall, Fulton, and DeKalb counties",
+    "On-call rotation for after-hours service",
+    "Project sizes from a single panel upgrade to a building-wide retrofit"
+  ],
+
+  "ctaEyebrow": "Need an electrician?",
+  "ctaHeading": "Let's scope the work.",
+  "ctaParagraph": "Whether it's a service call, a code-driven upgrade, or a project that needs HVAC + electrical + plumbing under one roof, we can scope, install, and stand behind the work."
+}

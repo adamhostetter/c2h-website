@@ -1,0 +1,94 @@
+{
+  "slug": "buford",
+  "name": "C2H — Buford",
+  "shortName": "Buford",
+  "tagline": "Durable Partnerships",
+  "heroHeading": "Durable Partnerships. Built for Buford.",
+  "heroParagraph": "Our Buford team — formerly Timco Heating & Air — serves North Atlanta's commercial buildings with HVAC, controls, electrical, plumbing, planned maintenance, and emergency response.",
+  "phone": "(770) 542-8337",
+  "phoneE164": "+17705428337",
+  "email": "info@c2h.com",
+  "emailTodo": "Placeholder address — confirm with C2H or replace with the real general-dispatch email. Timco's site lists mike@timcoair.com (personal) which we don't want on a public marketing page.",
+  "address": {
+    "street": "5309 Palmero Court, Suite 200",
+    "city": "Buford",
+    "state": "GA",
+    "zip": "30518"
+  },
+  "mapCoords": { "lat": 34.1209, "lng": -83.9889 },
+  "mapCoordsTodo": "Approximated from build-directory.js (Buford centroid). Refine to street-level if available.",
+  "canonicalUrl": "https://c2h.com/buford",
+  "parentLink": "https://firstcallmechanical.com",
+  "isExternalDomain": true,
+  "heroVideo": "shared/img/videos/c2h-hero.mp4",
+  "heroVideoTodo": "Reuses the Lawrenceville hero video as a placeholder; source Buford-specific footage if desired.",
+  "careersUrl": "https://firstcallmechanical.com/mechanical/careers",
+  "industriesLead": "We serve the buildings that keep North Georgia and Greater Atlanta running — across healthcare, industrial, education, hospitality, and beyond.",
+  "photoStrip": [
+    "shared/img/photos/c2h/lift.jpg",
+    "shared/img/photos/c2h/drone-aerial.jpg",
+    "shared/img/photos/c2h/jobsite.jpg"
+  ],
+  "photoStripTodo": "Placeholder shots reused from STR's generic pool. Replace with Buford-specific production photos before launch.",
+  "services": [
+    {
+      "key": "hvac",
+      "title": "HVAC Services",
+      "body": "Comprehensive heating, ventilation, and air conditioning service for commercial and industrial facilities."
+    },
+    {
+      "key": "controls",
+      "title": "Building Controls",
+      "body": "Design, installation, and integration of building automation systems that reduce operating costs."
+    },
+    {
+      "key": "electrical",
+      "title": "Electrical",
+      "body": "Commercial electrical service and project work — power distribution, lighting, switchgear, and code-driven upgrades."
+    },
+    {
+      "key": "plumbing",
+      "title": "Plumbing",
+      "body": "Commercial plumbing service, repair, and project work — domestic water, sanitary, gas, and backflow."
+    },
+    {
+      "key": "planned",
+      "title": "Planned Maintenance",
+      "body": "Programmatic service plans with predictable scheduling and asset-level tracking."
+    },
+    {
+      "key": "emergency",
+      "title": "Emergency Services",
+      "body": "24 / 7 emergency response — staffed dispatch and an on-call technician roster, always available."
+    },
+    {
+      "key": "projects",
+      "title": "Project Support",
+      "body": "Design-build, retrofit, and equipment-upgrade projects delivered by tradespeople who know the install — and the service after."
+    }
+  ],
+  "servicesReviewTodo": "Service bodies generic; revisit for C2H Buford-specific tone (formerly Timco). Confirm Electrical + Plumbing are in-house at Buford or referred out.",
+  "technicalExperience": [
+    "Air Handlers (AHUs)",
+    "Boilers — Hot Water & Steam",
+    "Booster Pumps",
+    "Chillers — Air-Cooled",
+    "Chillers — Water-Cooled",
+    "Cooling Towers",
+    "DOAS Units",
+    "Exhaust Fans",
+    "Fan Coil Units",
+    "Heat Pumps",
+    "Humidification Systems",
+    "Make-Up Air Units",
+    "Pumps & Pump Stations",
+    "Rooftop Units (RTUs)",
+    "Split Systems",
+    "Steam Traps",
+    "VAV / VFD Systems",
+    "VRF / VRV Systems",
+    "Water-Source Heat Pumps"
+  ],
+  "stateLicenses": [],
+  "stateLicensesTodo": "Confirm whether GA requires license disclosure on the site."
+}

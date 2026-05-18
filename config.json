@@ -1,0 +1,95 @@
+{
+  "slug": "lawrenceville",
+  "name": "C2H — Lawrenceville",
+  "shortName": "Lawrenceville",
+  "tagline": "Durable Partnerships",
+  "heroHeading": "Durable Partnerships. Built for Lawrenceville.",
+  "heroParagraph": "Our Lawrenceville team keeps Greater Atlanta's commercial buildings running — HVAC, building controls, electrical, plumbing, planned maintenance, and emergency service, backed by a national platform.",
+  "phone": "(678) 827-1224",
+  "phoneE164": "+16788271224",
+  "email": "info@c2h.com",
+  "emailTodo": "Placeholder address — confirm with C2H or replace with the real general-dispatch email before launch. C2H's website lists a personal address (ryan.smith@firstcallmechanical.com) which we don't want on a public marketing page.",
+  "address": {
+    "street": "1625 Lakes Parkway, Suite H",
+    "city": "Lawrenceville",
+    "state": "GA",
+    "zip": "30043"
+  },
+  "mapCoords": { "lat": 33.9562, "lng": -83.9879 },
+  "mapCoordsTodo": "Approximated from build-directory.js (Lawrenceville centroid). Refine to street-level if available.",
+  "canonicalUrl": "https://c2h.com",
+  "parentLink": "https://firstcallmechanical.com",
+  "isExternalDomain": true,
+  "heroVideo": "shared/img/videos/c2h-hero.mp4",
+  "heroVideoTodo": "9.4 MB MP4 (1440p / 24fps). Acceptable for demo; consider compressing to ~3-5 MB at 720p before public launch.",
+  "careersUrl": "https://firstcallmechanical.com/mechanical/careers",
+  "industriesLead": "We serve the buildings that keep Metro Atlanta and North Georgia running — across healthcare, industrial, education, hospitality, and beyond.",
+  "photoStrip": [
+    "shared/img/photos/c2h/lift.jpg",
+    "shared/img/photos/c2h/drone-aerial.jpg",
+    "shared/img/photos/c2h/jobsite.jpg"
+  ],
+  "photoStripTodo": "Placeholder shots reused from STR's generic mechanical-work pool. Replace with C2H-specific production photos before launch; compress drone-aerial.jpg + jobsite.jpg to ~400-600 KB.",
+  "services": [
+    {
+      "key": "hvac",
+      "title": "HVAC Services",
+      "body": "Comprehensive heating, ventilation, and air conditioning service for commercial and industrial facilities."
+    },
+    {
+      "key": "controls",
+      "title": "Building Controls",
+      "body": "Design, installation, and integration of building automation systems that reduce operating costs."
+    },
+    {
+      "key": "electrical",
+      "title": "Electrical",
+      "body": "Commercial electrical service and project work — power distribution, lighting, switchgear, and code-driven upgrades."
+    },
+    {
+      "key": "plumbing",
+      "title": "Plumbing",
+      "body": "Commercial plumbing service, repair, and project work — domestic water, sanitary, gas, and backflow."
+    },
+    {
+      "key": "planned",
+      "title": "Planned Maintenance",
+      "body": "Programmatic service plans with predictable scheduling and asset-level tracking."
+    },
+    {
+      "key": "emergency",
+      "title": "Emergency Services",
+      "body": "24 / 7 emergency response — staffed dispatch and an on-call technician roster, always available."
+    },
+    {
+      "key": "projects",
+      "title": "Project Support",
+      "body": "Design-build, retrofit, and equipment-upgrade projects delivered by tradespeople who know the install — and the service after."
+    }
+  ],
+  "servicesReviewTodo": "Service bodies are general commercial-mechanical copy. Revisit for C2H-specific tone and capability claims (especially Electrical + Plumbing — confirm in-house vs subcontracted).",
+  "technicalExperience": [
+    "Air Handlers (AHUs)",
+    "Boilers — Hot Water & Steam",
+    "Booster Pumps",
+    "Chillers — Air-Cooled",
+    "Chillers — Water-Cooled",
+    "Cooling Towers",
+    "DOAS Units",
+    "Exhaust Fans",
+    "Fan Coil Units",
+    "Heat Pumps",
+    "Humidification Systems",
+    "Make-Up Air Units",
+    "Pumps & Pump Stations",
+    "Rooftop Units (RTUs)",
+    "Split Systems",
+    "Steam Traps",
+    "VAV / VFD Systems",
+    "VRF / VRV Systems",
+    "Water-Source Heat Pumps"
+  ],
+  "technicalExperienceTodo": "Equipment list inherited from STR pattern. Confirm C2H's actual capability mix.",
+  "stateLicenses": [],
+  "stateLicensesTodo": "Confirm whether GA requires license disclosure on the site (e.g., GA HVAC class I/II license numbers)."
+}

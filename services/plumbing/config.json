@@ -1,0 +1,63 @@
+{
+  "slug": "plumbing",
+  "title": "Plumbing",
+  "lede": "Commercial plumbing service across Greater Atlanta — domestic water, sanitary, gas piping, backflow prevention, and the cross-trade coordination that comes from running plumbing under the same roof as HVAC and electrical.",
+  "metaDescription": "Commercial plumbing service and project work from C2H — domestic water, sanitary, gas piping, backflow, water heaters across Greater Atlanta.",
+  "canonicalUrl": "https://c2h.com/services/plumbing",
+  "careersUrl": "https://firstcallmechanical.com/mechanical/careers",
+
+  "featuresEyebrow": "What we do",
+  "featuresHeading": "Commercial plumbing, from the meter to the fixture.",
+  "featuresLead": "Service and project work for commercial facilities — restaurants, offices, healthcare, industrial. Sized for the kind of jobs a residential plumber can't take and a generalist GC won't.",
+
+  "features": [
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2.5C12 2.5 6 9 6 14a6 6 0 1 0 12 0c0-5-6-11.5-6-11.5z\"/></svg>",
+      "title": "Domestic water systems",
+      "body": "Service entrances, booster pumps, pressure-reducing valves, recirculation, expansion tanks, copper, PEX, CPVC, and PEX-AL-PEX installation and repair."
+    },
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M5 12v6h14v-6M12 6l-3 6h6l-3-6z\"/></svg>",
+      "title": "Sanitary & vent",
+      "body": "Underslab and overhead sanitary, vent stack work, grease interceptors, ejector pits and lift stations, drain cleaning and high-pressure jetting."
+    },
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v10M8 12h8\"/></svg>",
+      "title": "Backflow prevention",
+      "body": "Certified backflow testing, installation, repair, and annual recertification. RPZ, DCDA, PVB. State-of-Georgia certified testers on staff."
+    },
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4\"/><circle cx=\"12\" cy=\"12\" r=\"4\"/></svg>",
+      "title": "Water heaters",
+      "body": "Commercial water heater service and replacement — gas, electric, condensing, and heat-pump units. Tankless, semi-instantaneous, and storage. Recirculation tuning."
+    },
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M8 2l8 0M8 22l8 0M12 2v20\"/><path d=\"M9 7c0-1 1-2 3-2s3 1 3 2M9 17c0-1 1-2 3-2s3 1 3 2\"/></svg>",
+      "title": "Gas piping",
+      "body": "Natural gas and propane service — service entrances, sub-meters, rooftop runs to RTUs and boilers, pressure testing, AHJ-witnessed leak checks."
+    },
+    {
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/></svg>",
+      "title": "Leak detection & response",
+      "body": "Acoustic and thermal leak detection, slab leak isolation, emergency response for active leaks. Coordinated with restoration vendors when water damage has already happened."
+    }
+  ],
+
+  "whyEyebrow": "Why C2H Plumbing",
+  "whyHeading": "Commercial-only. Cross-trade. On call.",
+  "whyParagraphs": [
+    "Most commercial plumbing problems aren't actually plumbing problems. A boiler that won't fire might be a gas-pressure problem. A cooling tower with low make-up might be a backflow problem. A unit that's tripping breakers might have a recirculation pump locked rotor.",
+    "C2H runs plumbing in-house with HVAC and electrical, so the tech who shows up has visibility across all three trades. Faster diagnosis, fewer repeat trips, and one invoice instead of three."
+  ],
+  "whyBullets": [
+    "Master plumbers licensed in Georgia",
+    "State-certified backflow testers on staff",
+    "Commercial-only — no residential service work competing for the calendar",
+    "Coordinated with HVAC for boilers, cooling towers, water heaters",
+    "On-call rotation for emergency response"
+  ],
+
+  "ctaEyebrow": "Have a plumbing issue?",
+  "ctaHeading": "Let's get you on the schedule.",
+  "ctaParagraph": "Service calls, backflow recerts, project work, or full mechanical-room overhauls — describe what you're seeing and we'll come out, scope it, and send a proposal."
+}
