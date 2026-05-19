@@ -1,80 +1,22 @@
 /**
- * Cloudflare Pages multi-domain router + form-submission handler.
+ * Cloudflare Pages Function — C2H (c2h.com)
  *
- * Routing — same Pages project serves two custom domains:
- *   firstcallgroup.com        → FCG content (repo root files)
- *   firstcallmechanical.com   → FCM content (from /mechanical/* + the
- *                                /columbus, /dfw, /central-texas branch
- *                                files at root)
+ * Two responsibilities:
+ *   1. Form submissions — POST /api/contact accepts form data, looks up
+ *      recipients by the `_form` hidden field, forwards via the Resend API.
+ *   2. Pass-through asset serving for everything else.
  *
- * Forms — POST /api/contact accepts form submissions from any of the 9
- * forms across both sites, looks up recipients by the `_form` hidden
- * field, and forwards the message via the Resend API. Recipients live in
- * FORM_ROUTING below; the Resend API key lives in env.RESEND_API_KEY
- * (set as a Cloudflare Pages secret, NEVER in the repo).
+ * Secrets — set in Cloudflare Pages → Settings → Environment variables:
+ *   RESEND_API_KEY   (re-use the same key as the FCG/FCM project)
  */
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    // =========================================================================
-    // Form submissions — same endpoint on both hosts
-    // =========================================================================
     if (url.pathname === "/api/contact" && request.method === "POST") {
       return handleContactForm(request, env);
     }
 
-    const host = url.hostname.replace(/^www\./, "");
-    const path = url.pathname;
-
-    // =========================================================================
-    // firstcallmechanical.com
-    // =========================================================================
-    if (host === "firstcallmechanical.com") {
-      const rewrites = {
-        "/":           "/mechanical/index.html",
-        "/locations":  "/mechanical/locations.html",
-        "/careers":    "/mechanical/careers.html",
-        "/contact":    "/mechanical/contact.html",
-      };
-      const stripped = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
-      const target = rewrites[stripped];
-      if (target) {
-        const rewritten = new URL(target, url.origin);
-        return env.ASSETS.fetch(new Request(rewritten, request));
-      }
-
-      if (path === "/index.html") {
-        return Response.redirect("https://firstcallmechanical.com/" + url.search, 301);
-      }
-
-      if (/^\/(team|news|acquisitions)(\/.*)?$/.test(path)) {
-        return Response.redirect(`https://firstcallgroup.com${path}${url.search}`, 301);
-      }
-
-      return env.ASSETS.fetch(request);
-    }
-
-    // =========================================================================
-    // firstcallgroup.com
-    // =========================================================================
-    if (host === "firstcallgroup.com") {
-      if (/^\/(columbus|dfw|central-texas)(\/.*)?$/.test(path)) {
-        return Response.redirect(`https://firstcallmechanical.com${path}${url.search}`, 301);
-      }
-
-      if (path === "/mechanical" || path === "/mechanical/") {
-        return Response.redirect("https://firstcallmechanical.com/" + url.search, 301);
-      }
-      if (path.startsWith("/mechanical/")) {
-        const newPath = path.substring("/mechanical".length);
-        return Response.redirect(`https://firstcallmechanical.com${newPath}${url.search}`, 301);
-      }
-
-      return env.ASSETS.fetch(request);
-    }
-
-    // Any other host (pages.dev preview, localhost, etc.) — serve as-is.
     return env.ASSETS.fetch(request);
   },
 };
@@ -86,37 +28,21 @@ export default {
 // One row per form. Each value is the recipient list for that form.
 // Adding a new form: add a row here AND set <input name="_form" value="..."> in the page.
 const FORM_ROUTING = {
-  "fcg-contact":          ["chris@firstcallgroup.com",          "Adam.Hostetter@firstcallgroup.com"],
-  "fcg-acquisitions":     ["chris@firstcallgroup.com",          "Adam.Hostetter@firstcallgroup.com"],
-  "fcm-contact":          ["info@firstcallgroup.com",           "Adam.Hostetter@firstcallgroup.com"],
-  "fcm-columbus-service": ["serviceoh@firstcallmechanical.com", "Adam.Hostetter@firstcallgroup.com", "spriest@firstcallmechanical.com"],
-  "fcm-dfw-service":      ["dispatch@firstcallmechanical.com",  "Adam.Hostetter@firstcallgroup.com", "scott.smith@firstcallmechanical.com"],
-  "fcm-atx-service":      ["dispatch@firstcallmechanical.com",  "Adam.Hostetter@firstcallgroup.com", "scott.smith@firstcallmechanical.com"],
-  "fcm-columbus-contact": ["serviceoh@firstcallmechanical.com", "Adam.Hostetter@firstcallgroup.com", "spriest@firstcallmechanical.com"],
-  "fcm-dfw-contact":      ["dispatch@firstcallmechanical.com",  "Adam.Hostetter@firstcallgroup.com", "scott.smith@firstcallmechanical.com"],
-  "fcm-atx-contact":      ["dispatch@firstcallmechanical.com",  "Adam.Hostetter@firstcallgroup.com", "scott.smith@firstcallmechanical.com"],
+  "c2h-contact": ["info@c2h.com", "Adam.Hostetter@firstcallgroup.com"],
 };
 
 const FORM_LABELS = {
-  "fcg-contact":          "FirstCall Group contact form",
-  "fcg-acquisitions":     "FirstCall Group acquisitions inquiry",
-  "fcm-contact":          "FirstCall Mechanical contact form",
-  "fcm-columbus-service": "Columbus service request",
-  "fcm-dfw-service":      "DFW service request",
-  "fcm-atx-service":      "Austin service request",
-  "fcm-columbus-contact": "Columbus contact form",
-  "fcm-dfw-contact":      "DFW contact form",
-  "fcm-atx-contact":      "Austin contact form",
+  "c2h-contact": "C2H contact form",
 };
 
-// The "from" address must be on a domain you've verified in Resend.
-// firstcallgroup.com should be verified (DNS records added to the Cloudflare
-// zone for firstcallgroup.com).
-const FROM_EMAIL = "FirstCall <noreply@firstcallgroup.com>";
+// The "from" address must be on a domain verified in Resend. firstcallgroup.com
+// is already verified for the FCG/FCM project — reusing it here means no extra
+// DNS setup. Reply-to is set to the submitter's email, so replies still route
+// back to the customer.
+const FROM_EMAIL = "C2H <noreply@firstcallgroup.com>";
 
 async function handleContactForm(request, env) {
   try {
-    // Parse body — accept JSON or form-encoded.
     const ct = request.headers.get("content-type") || "";
     const data = ct.includes("application/json")
       ? await request.json()

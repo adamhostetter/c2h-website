@@ -24,12 +24,8 @@
   "heroVideoTodo": "9.4 MB MP4 (1440p / 24fps). Acceptable for demo; consider compressing to ~3-5 MB at 720p before public launch.",
   "careersUrl": "https://firstcallmechanical.com/mechanical/careers",
   "industriesLead": "We serve the buildings that keep Metro Atlanta and North Georgia running — across healthcare, industrial, education, hospitality, and beyond.",
-  "photoStrip": [
-    "shared/img/photos/c2h/lift.jpg",
-    "shared/img/photos/c2h/drone-aerial.jpg",
-    "shared/img/photos/c2h/jobsite.jpg"
-  ],
-  "photoStripTodo": "Placeholder shots reused from STR's generic mechanical-work pool. Replace with C2H-specific production photos before launch; compress drone-aerial.jpg + jobsite.jpg to ~400-600 KB.",
+  "photoStrip": [],
+  "photoStripTodo": "Hidden for launch — add C2H-specific production photos when available and the section will render again.",
   "services": [
     {
       "key": "hvac",

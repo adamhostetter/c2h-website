@@ -24,12 +24,8 @@
   "heroVideoTodo": "Reuses the Lawrenceville hero video as a placeholder; source Buford-specific footage if desired.",
   "careersUrl": "https://firstcallmechanical.com/mechanical/careers",
   "industriesLead": "We serve the buildings that keep North Georgia and Greater Atlanta running — across healthcare, industrial, education, hospitality, and beyond.",
-  "photoStrip": [
-    "shared/img/photos/c2h/lift.jpg",
-    "shared/img/photos/c2h/drone-aerial.jpg",
-    "shared/img/photos/c2h/jobsite.jpg"
-  ],
-  "photoStripTodo": "Placeholder shots reused from STR's generic pool. Replace with Buford-specific production photos before launch.",
+  "photoStrip": [],
+  "photoStripTodo": "Hidden for launch — add Buford-specific production photos when available and the section will render again.",
   "services": [
     {
       "key": "hvac",
