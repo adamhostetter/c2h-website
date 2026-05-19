@@ -1,10 +1,10 @@
 {
   "slug": "lawrenceville",
-  "name": "C2H — Lawrenceville",
-  "shortName": "Lawrenceville",
+  "name": "C2H — Atlanta",
+  "shortName": "Atlanta",
   "tagline": "Durable Partnerships",
-  "heroHeading": "Durable Partnerships. Built for Lawrenceville.",
-  "heroParagraph": "Our Lawrenceville team keeps Greater Atlanta's commercial buildings running — HVAC, building controls, electrical, plumbing, planned maintenance, and emergency service, backed by a national platform.",
+  "heroHeading": "Durable Partnerships. Built for Atlanta.",
+  "heroParagraph": "Our Atlanta team keeps Greater Atlanta's commercial buildings running — HVAC, planned maintenance, emergency response, project support, electrical, plumbing, and building controls, backed by a national platform.",
   "phone": "(678) 827-1224",
   "phoneE164": "+16788271224",
   "email": "info@c2h.com",
@@ -37,21 +37,6 @@
       "body": "Comprehensive heating, ventilation, and air conditioning service for commercial and industrial facilities."
     },
     {
-      "key": "controls",
-      "title": "Building Controls",
-      "body": "Design, installation, and integration of building automation systems that reduce operating costs."
-    },
-    {
-      "key": "electrical",
-      "title": "Electrical",
-      "body": "Commercial electrical service and project work — power distribution, lighting, switchgear, and code-driven upgrades."
-    },
-    {
-      "key": "plumbing",
-      "title": "Plumbing",
-      "body": "Commercial plumbing service, repair, and project work — domestic water, sanitary, gas, and backflow."
-    },
-    {
       "key": "planned",
       "title": "Planned Maintenance",
       "body": "Programmatic service plans with predictable scheduling and asset-level tracking."
@@ -65,6 +50,21 @@
       "key": "projects",
       "title": "Project Support",
       "body": "Design-build, retrofit, and equipment-upgrade projects delivered by tradespeople who know the install — and the service after."
+    },
+    {
+      "key": "electrical",
+      "title": "Electrical",
+      "body": "Commercial electrical service and project work — power distribution, lighting, switchgear, and code-driven upgrades."
+    },
+    {
+      "key": "plumbing",
+      "title": "Plumbing",
+      "body": "Commercial plumbing service, repair, and project work — domestic water, sanitary, gas, and backflow."
+    },
+    {
+      "key": "controls",
+      "title": "Building Controls",
+      "body": "Design, installation, and integration of building automation systems that reduce operating costs."
     }
   ],
   "servicesReviewTodo": "Service bodies are general commercial-mechanical copy. Revisit for C2H-specific tone and capability claims (especially Electrical + Plumbing — confirm in-house vs subcontracted).",
