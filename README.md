@@ -94,6 +94,25 @@ Cream-and-navy palette (Columbus reference): page `#FCFBF7`, text `#1A2331`, acc
 - [ ] **C2H-branded favicon** — currently uses `firstcall-group-favicon.svg`. Make a C2H favicon.
 - [ ] **Privacy + Terms pages** — currently `href="#"` placeholders.
 - [ ] **Real LinkedIn URL for C2H** — footer links to `linkedin.com/company/firstcall-mechanical/` (inherited). If C2H has its own LinkedIn presence, swap.
+- [ ] **Anti-spam: Cloudflare Turnstile** — mirror the Starnes implementation
+      (Starnes repo, commit `b70d9f8` — "Add anti-spam layers to contact form:
+      Turnstile + time + origin"). The contact form on c2h.com is currently
+      protected by honeypot only. Add four layers in `_worker.js`, all
+      silent-ok on rejection so bots can't learn:
+      1. Origin allowlist (reject POSTs from outside `c2h.com` / `www.c2h.com`)
+      2. Honeypot (already in place)
+      3. Min-submit-time — JS writes `Date.now()` into a hidden `_ts`;
+         worker rejects if elapsed < 3 s
+      4. Cloudflare Turnstile — verify token via
+         `challenges.cloudflare.com/turnstile/v0/siteverify`
+
+      Setup (~15 min): Cloudflare dash → Turnstile → Add widget named
+      `C2H Contact Form` (hostnames `c2h.com`, `www.c2h.com`, and the Pages
+      preview). Add `TURNSTILE_SECRET_KEY` as a Pages secret. Copy the 4-layer
+      `_worker.js` pattern, the form-HTML widget div + `_ts` field + script
+      tag, and the `_ts` setter in `assets/js/form-handler.js` from Starnes.
+      Wire on both `index.html` (Atlanta) and `buford.html` plus the shared
+      template. Swap the site key for C2H's.
 
 ### 📦 When ready to push to GitHub
 
