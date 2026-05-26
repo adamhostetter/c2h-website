@@ -49,7 +49,7 @@
     "name": "C2H — Atlanta",
     "image": "",
     "telephone": "+16788271224",
-    "email": "info@c2h.com",
+    "email": "service@c2h.com",
     "url": "https://c2h.com",
     "address": {
       "@type": "PostalAddress",
@@ -1602,6 +1602,73 @@ small, .text-small { font-size: var(--text-sm); }
 }
 .section-head .lead { margin-inline: auto; }
 
+/* Service area — Georgia + Tennessee */
+.region {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+@media (max-width: 1023px) {
+  .region { grid-template-columns: 1fr; gap: var(--space-6); }
+}
+.region__copy .eyebrow { color: var(--color-accent); }
+.region__copy h2 { margin-top: var(--space-3); }
+.region__copy .lead { margin-top: var(--space-4); max-width: 56ch; }
+.region__stats {
+  display: flex;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+  flex-wrap: wrap;
+}
+.region__stat-num {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-extrabold);
+  color: var(--color-primary);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
+}
+.region__stat-label {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+}
+.region__cta { margin-top: var(--space-6); display: inline-flex; }
+.region__map { display: flex; justify-content: center; }
+.region__map svg { width: 100%; max-width: 520px; height: auto; }
+.region__state {
+  fill: var(--color-primary);
+  stroke: var(--color-primary-dark);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  transition: fill var(--duration-base) var(--ease-out);
+}
+.region__state-group:hover .region__state { fill: var(--color-primary-mid); }
+.region__state-label {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  fill: #fff;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+}
+.region__pin {
+  fill: var(--color-accent);
+  stroke: #fff;
+  stroke-width: 2;
+}
+.region__pin-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--color-text);
+  pointer-events: none;
+}
+
 /* Capabilities */
 .capabilities {
   display: grid;
@@ -1618,6 +1685,8 @@ small, .text-small { font-size: var(--text-sm); }
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+  color: var(--color-text);
+  text-decoration: none;
   transition: border-color var(--duration-base) var(--ease-out),
               box-shadow var(--duration-base) var(--ease-out),
               transform var(--duration-base) var(--ease-out);
@@ -1626,7 +1695,9 @@ small, .text-small { font-size: var(--text-sm); }
   border-color: var(--color-accent);
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
+  color: var(--color-text);
 }
+.capability:hover .capability__title { color: var(--color-primary); }
 .capability__icon {
   width: 56px; height: 56px;
   display: inline-flex; align-items: center; justify-content: center;
@@ -1976,7 +2047,9 @@ small, .text-small { font-size: var(--text-sm); }
           </button>
           <div class="site-nav__dropdown" data-dropdown-menu>
             <a class="site-nav__dropdown-link" href="index.html">Atlanta</a>
+            <!-- Buford is paused; re-enable in June 2026:
             <a class="site-nav__dropdown-link" href="buford.html">Buford</a>
+            -->
           </div>
         </div>
 
@@ -2028,6 +2101,90 @@ small, .text-small { font-size: var(--text-sm); }
       </div>
     </section>
 
+    <!-- 2. REGIONAL COVERAGE — Georgia + Tennessee -->
+    <section class="section section--soft" id="region" aria-labelledby="region-heading">
+      <div class="container">
+        <div class="region">
+          <div class="region__copy">
+            <span class="eyebrow">Regional Coverage</span>
+            <h2 id="region-heading">Your mechanical partner across Georgia &amp; Tennessee.</h2>
+            <p class="lead">More than Atlanta. C2H supports commercial buildings throughout Georgia and into Tennessee — planned-maintenance routes, project crews, and 24 / 7 emergency response wherever your portfolio operates.</p>
+
+            <div class="region__stats">
+              <div>
+                <div class="region__stat-num">2</div>
+                <div class="region__stat-label">States Served</div>
+              </div>
+              <div>
+                <div class="region__stat-num">24 / 7</div>
+                <div class="region__stat-label">Emergency Response</div>
+              </div>
+              <div>
+                <div class="region__stat-num">1</div>
+                <div class="region__stat-label">National Platform</div>
+              </div>
+            </div>
+
+            <a class="btn btn--primary btn--lg region__cta" href="#contact">Request Coverage</a>
+          </div>
+
+          <div class="region__map">
+            <svg viewBox="0 0 600 460" role="img" aria-label="Service area across Georgia and Tennessee">
+              <!-- TENNESSEE -->
+              <g class="region__state-group">
+                <path class="region__state"
+                      d="M 35 55
+                         L 110 50
+                         L 240 46
+                         L 380 48
+                         L 510 52
+                         L 555 60
+                         L 580 90
+                         L 555 118
+                         L 575 138
+                         L 525 148
+                         L 470 152
+                         L 360 156
+                         L 240 160
+                         L 130 158
+                         L 55 152
+                         L 42 110
+                         Z"/>
+                <text class="region__state-label" x="295" y="108" text-anchor="middle">TENNESSEE</text>
+              </g>
+              <!-- GEORGIA -->
+              <g class="region__state-group">
+                <path class="region__state"
+                      d="M 215 170
+                         L 235 165
+                         L 275 162
+                         L 320 168
+                         L 360 195
+                         L 395 235
+                         L 422 280
+                         L 432 320
+                         L 440 360
+                         L 442 400
+                         L 405 418
+                         L 360 425
+                         L 305 425
+                         L 250 420
+                         L 215 412
+                         L 210 360
+                         L 208 290
+                         L 210 220
+                         Z"/>
+                <text class="region__state-label" x="320" y="305" text-anchor="middle">GEORGIA</text>
+                <!-- Atlanta pin -->
+                <circle class="region__pin" cx="278" cy="245" r="6"/>
+                <text class="region__pin-label" x="288" y="249">Atlanta</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 3. OUR CAPABILITIES -->
     <section class="section" id="services" aria-labelledby="caps-heading">
       <div class="container">
@@ -2039,61 +2196,61 @@ small, .text-small { font-size: var(--text-sm); }
 
         <div class="capabilities">
           
-          <article class="capability" id="service-hvac">
+          <a class="capability" id="service-hvac" href="services/hvac.html">
             <span class="capability__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
             </span>
             <h4 class="capability__title">HVAC Services</h4>
             <p class="capability__body">Comprehensive heating, ventilation, and air conditioning service for commercial and industrial facilities.</p>
-          </article>
+          </a>
 
-          <article class="capability" id="service-planned">
+          <a class="capability" id="service-planned" href="services/planned-maintenance.html">
             <span class="capability__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v6h-6"/></svg>
             </span>
             <h4 class="capability__title">Planned Maintenance</h4>
             <p class="capability__body">Programmatic service plans with predictable scheduling and asset-level tracking.</p>
-          </article>
+          </a>
 
-          <article class="capability" id="service-emergency">
+          <a class="capability" id="service-emergency" href="services/emergency.html">
             <span class="capability__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
             </span>
             <h4 class="capability__title">Emergency Services</h4>
             <p class="capability__body">24 / 7 emergency response — staffed dispatch and an on-call technician roster, always available.</p>
-          </article>
+          </a>
 
-          <article class="capability" id="service-projects">
+          <a class="capability" id="service-projects" href="services/project-support.html">
             <span class="capability__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
             </span>
             <h4 class="capability__title">Project Support</h4>
             <p class="capability__body">Design-build, retrofit, and equipment-upgrade projects delivered by tradespeople who know the install — and the service after.</p>
-          </article>
+          </a>
 
-          <article class="capability" id="service-electrical">
+          <a class="capability" id="service-electrical" href="services/electrical.html">
             <span class="capability__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10"/></svg>
             </span>
             <h4 class="capability__title">Electrical</h4>
             <p class="capability__body">Commercial electrical service and project work — power distribution, lighting, switchgear, and code-driven upgrades.</p>
-          </article>
+          </a>
 
-          <article class="capability" id="service-plumbing">
+          <a class="capability" id="service-plumbing" href="services/plumbing.html">
             <span class="capability__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5C12 2.5 6 9 6 14a6 6 0 1 0 12 0c0-5-6-11.5-6-11.5z"/></svg>
             </span>
             <h4 class="capability__title">Plumbing</h4>
             <p class="capability__body">Commercial plumbing service, repair, and project work — domestic water, sanitary, gas, and backflow.</p>
-          </article>
+          </a>
 
-          <article class="capability" id="service-controls">
+          <a class="capability" id="service-controls" href="services/building-controls.html">
             <span class="capability__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
             </span>
             <h4 class="capability__title">Building Controls</h4>
             <p class="capability__body">Design, installation, and integration of building automation systems that reduce operating costs.</p>
-          </article>
+          </a>
           
         </div>
       </div>
@@ -2139,9 +2296,7 @@ small, .text-small { font-size: var(--text-sm); }
           <li>Rooftop Units (RTUs)</li>
           
           <li>Split Systems</li>
-          
-          <li>Steam Traps</li>
-          
+
           <li>VAV / VFD Systems</li>
           
           <li>VRF / VRV Systems</li>
@@ -2272,31 +2427,34 @@ small, .text-small { font-size: var(--text-sm); }
     <section class="section section--soft" id="locations" aria-labelledby="locations-heading">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Our Locations</span>
-          <h2 id="locations-heading">Two offices. One team.</h2>
-          <p class="lead">C2H serves Greater Atlanta and North Georgia from two regional offices — local crews, shared platform.</p>
+          <span class="eyebrow">Our Office</span>
+          <h2 id="locations-heading">One team. Built for the Southeast.</h2>
+          <p class="lead">C2H serves Greater Atlanta from our Lawrenceville office — local crews backed by a national platform.</p>
         </div>
 
-        <div class="locations-grid">
+        <div class="locations-grid" style="grid-template-columns: minmax(280px, 440px); justify-content: center;">
           <article class="location-card">
             <div class="location-card__city">Atlanta <span class="location-card__badge">HQ</span></div>
             <p class="location-card__addr">1625 Lakes Parkway, Suite H<br>Lawrenceville, GA 30043</p>
             <p class="location-card__contact">
               <a href="tel:+16788271224">(678) 827-1224</a><br>
-              <a href="mailto:info@c2h.com">info@c2h.com</a>
+              <a href="mailto:service@c2h.com">service@c2h.com</a>
             </p>
             <a href="index.html" class="link-arrow">View Atlanta</a>
           </article>
 
+          <!--
+            Buford location card paused; re-enable in June 2026 along with the nav dropdown link.
           <article class="location-card">
             <div class="location-card__city">Buford</div>
             <p class="location-card__addr">5309 Palmero Court, Suite 200<br>Buford, GA 30518</p>
             <p class="location-card__contact">
               <a href="tel:+17705428337">(770) 542-8337</a><br>
-              <a href="mailto:info@c2h.com">info@c2h.com</a>
+              <a href="mailto:service@c2h.com">service@c2h.com</a>
             </p>
             <a href="buford.html" class="link-arrow">View Buford</a>
           </article>
+          -->
         </div>
       </div>
     </section>
@@ -2323,7 +2481,7 @@ small, .text-small { font-size: var(--text-sm); }
         <div class="section-head">
           <span class="eyebrow">Careers</span>
           <h2 id="careers-heading">Join the C2H team.</h2>
-          <p class="lead">We're hiring across both locations — HVAC and electrical technicians, controls specialists, project leads, plumbers. If you want to do real work for real customers, we want to talk.</p>
+          <p class="lead">We're hiring on our Atlanta team — HVAC and electrical technicians, controls specialists, project leads, plumbers. If you want to do real work for real customers, we want to talk.</p>
         </div>
         <div class="careers-cta">
           <a class="btn btn--primary btn--lg" href="https://firstcallmechanical.com/mechanical/careers" target="_blank" rel="noopener">View Open Positions</a>
@@ -2408,7 +2566,7 @@ small, .text-small { font-size: var(--text-sm); }
             </div>
             <div class="contact-card__row">
               <div class="contact-card__label">Email</div>
-              <div class="contact-card__value"><a href="mailto:info@c2h.com">info@c2h.com</a></div>
+              <div class="contact-card__value"><a href="mailto:service@c2h.com">service@c2h.com</a></div>
             </div>
             <div class="contact-card__row">
               <div class="contact-card__label">Hours</div>
@@ -2482,7 +2640,7 @@ small, .text-small { font-size: var(--text-sm); }
             <li><span>1625 Lakes Parkway, Suite H</span></li>
             <li><span>Lawrenceville, GA 30043</span></li>
             <li><a href="tel:+16788271224">(678) 827-1224</a></li>
-            <li><a href="mailto:info@c2h.com">info@c2h.com</a></li>
+            <li><a href="mailto:service@c2h.com">service@c2h.com</a></li>
           </ul>
           
         </div>

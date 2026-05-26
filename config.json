@@ -7,7 +7,7 @@
   "heroParagraph": "Our Atlanta team keeps Greater Atlanta's commercial buildings running — HVAC, planned maintenance, emergency response, project support, electrical, plumbing, and building controls, backed by a national platform.",
   "phone": "(678) 827-1224",
   "phoneE164": "+16788271224",
-  "email": "info@c2h.com",
+  "email": "service@c2h.com",
   "emailTodo": "Placeholder address — confirm with C2H or replace with the real general-dispatch email before launch. C2H's website lists a personal address (ryan.smith@firstcallmechanical.com) which we don't want on a public marketing page.",
   "address": {
     "street": "1625 Lakes Parkway, Suite H",
@@ -80,7 +80,6 @@
     "Pumps & Pump Stations",
     "Rooftop Units (RTUs)",
     "Split Systems",
-    "Steam Traps",
     "VAV / VFD Systems",
     "VRF / VRV Systems",
     "Water-Source Heat Pumps"

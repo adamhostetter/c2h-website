@@ -7,7 +7,7 @@
   "heroParagraph": "Our Buford team — formerly Timco Heating & Air — serves North Atlanta's commercial buildings with HVAC, controls, electrical, plumbing, planned maintenance, and emergency response.",
   "phone": "(770) 542-8337",
   "phoneE164": "+17705428337",
-  "email": "info@c2h.com",
+  "email": "service@c2h.com",
   "emailTodo": "Placeholder address — confirm with C2H or replace with the real general-dispatch email. Timco's site lists mike@timcoair.com (personal) which we don't want on a public marketing page.",
   "address": {
     "street": "5309 Palmero Court, Suite 200",
@@ -80,7 +80,6 @@
     "Pumps & Pump Stations",
     "Rooftop Units (RTUs)",
     "Split Systems",
-    "Steam Traps",
     "VAV / VFD Systems",
     "VRF / VRV Systems",
     "Water-Source Heat Pumps"
