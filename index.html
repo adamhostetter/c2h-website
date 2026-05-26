@@ -1639,35 +1639,7 @@ small, .text-small { font-size: var(--text-sm); }
 }
 .region__cta { margin-top: var(--space-6); display: inline-flex; }
 .region__map { display: flex; justify-content: center; }
-.region__map svg { width: 100%; max-width: 520px; height: auto; }
-.region__state {
-  fill: var(--color-primary);
-  stroke: var(--color-primary-dark);
-  stroke-width: 2;
-  stroke-linejoin: round;
-  transition: fill var(--duration-base) var(--ease-out);
-}
-.region__state-group:hover .region__state { fill: var(--color-primary-mid); }
-.region__state-label {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 700;
-  fill: #fff;
-  letter-spacing: 0.1em;
-  pointer-events: none;
-}
-.region__pin {
-  fill: var(--color-accent);
-  stroke: #fff;
-  stroke-width: 2;
-}
-.region__pin-label {
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 600;
-  fill: var(--color-text);
-  pointer-events: none;
-}
+.region__map img { width: 100%; max-width: 520px; height: auto; display: block; }
 
 /* Capabilities */
 .capabilities {
@@ -2112,16 +2084,16 @@ small, .text-small { font-size: var(--text-sm); }
 
             <div class="region__stats">
               <div>
-                <div class="region__stat-num">2</div>
-                <div class="region__stat-label">States Served</div>
+                <div class="region__stat-num">1K+</div>
+                <div class="region__stat-label">Customers</div>
               </div>
               <div>
                 <div class="region__stat-num">24 / 7</div>
-                <div class="region__stat-label">Emergency Response</div>
+                <div class="region__stat-label">Response</div>
               </div>
               <div>
                 <div class="region__stat-num">1</div>
-                <div class="region__stat-label">National Platform</div>
+                <div class="region__stat-label">Number to Call</div>
               </div>
             </div>
 
@@ -2129,57 +2101,7 @@ small, .text-small { font-size: var(--text-sm); }
           </div>
 
           <div class="region__map">
-            <svg viewBox="0 0 600 460" role="img" aria-label="Service area across Georgia and Tennessee">
-              <!-- TENNESSEE -->
-              <g class="region__state-group">
-                <path class="region__state"
-                      d="M 35 55
-                         L 110 50
-                         L 240 46
-                         L 380 48
-                         L 510 52
-                         L 555 60
-                         L 580 90
-                         L 555 118
-                         L 575 138
-                         L 525 148
-                         L 470 152
-                         L 360 156
-                         L 240 160
-                         L 130 158
-                         L 55 152
-                         L 42 110
-                         Z"/>
-                <text class="region__state-label" x="295" y="108" text-anchor="middle">TENNESSEE</text>
-              </g>
-              <!-- GEORGIA -->
-              <g class="region__state-group">
-                <path class="region__state"
-                      d="M 215 170
-                         L 235 165
-                         L 275 162
-                         L 320 168
-                         L 360 195
-                         L 395 235
-                         L 422 280
-                         L 432 320
-                         L 440 360
-                         L 442 400
-                         L 405 418
-                         L 360 425
-                         L 305 425
-                         L 250 420
-                         L 215 412
-                         L 210 360
-                         L 208 290
-                         L 210 220
-                         Z"/>
-                <text class="region__state-label" x="320" y="305" text-anchor="middle">GEORGIA</text>
-                <!-- Atlanta pin -->
-                <circle class="region__pin" cx="278" cy="245" r="6"/>
-                <text class="region__pin-label" x="288" y="249">Atlanta</text>
-              </g>
-            </svg>
+            <img src="shared/img/maps/ga-tn-map.svg" alt="C2H service area across Georgia and Tennessee" loading="lazy" />
           </div>
         </div>
       </div>
