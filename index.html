@@ -1670,6 +1670,22 @@ small, .text-small { font-size: var(--text-sm); }
   color: var(--color-text);
 }
 .capability:hover .capability__title { color: var(--color-primary); }
+.capability:hover .capability__cta {
+  color: var(--color-accent-dark);
+  gap: var(--space-3);
+}
+.capability__cta {
+  margin-top: auto;
+  padding-top: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  transition: color var(--duration-base) var(--ease-out),
+              gap var(--duration-base) var(--ease-out);
+}
 .capability__icon {
   width: 56px; height: 56px;
   display: inline-flex; align-items: center; justify-content: center;
@@ -2124,6 +2140,7 @@ small, .text-small { font-size: var(--text-sm); }
             </span>
             <h4 class="capability__title">HVAC Services</h4>
             <p class="capability__body">Comprehensive heating, ventilation, and air conditioning service for commercial and industrial facilities.</p>
+            <span class="capability__cta" aria-hidden="true">Learn more →</span>
           </a>
 
           <a class="capability" id="service-planned" href="services/planned-maintenance.html">
@@ -2132,6 +2149,7 @@ small, .text-small { font-size: var(--text-sm); }
             </span>
             <h4 class="capability__title">Planned Maintenance</h4>
             <p class="capability__body">Programmatic service plans with predictable scheduling and asset-level tracking.</p>
+            <span class="capability__cta" aria-hidden="true">Learn more →</span>
           </a>
 
           <a class="capability" id="service-emergency" href="services/emergency.html">
@@ -2140,6 +2158,7 @@ small, .text-small { font-size: var(--text-sm); }
             </span>
             <h4 class="capability__title">Emergency Services</h4>
             <p class="capability__body">24 / 7 emergency response — staffed dispatch and an on-call technician roster, always available.</p>
+            <span class="capability__cta" aria-hidden="true">Learn more →</span>
           </a>
 
           <a class="capability" id="service-projects" href="services/project-support.html">
@@ -2148,6 +2167,7 @@ small, .text-small { font-size: var(--text-sm); }
             </span>
             <h4 class="capability__title">Project Support</h4>
             <p class="capability__body">Design-build, retrofit, and equipment-upgrade projects delivered by tradespeople who know the install — and the service after.</p>
+            <span class="capability__cta" aria-hidden="true">Learn more →</span>
           </a>
 
           <a class="capability" id="service-electrical" href="services/electrical.html">
@@ -2156,6 +2176,7 @@ small, .text-small { font-size: var(--text-sm); }
             </span>
             <h4 class="capability__title">Electrical</h4>
             <p class="capability__body">Commercial electrical service and project work — power distribution, lighting, switchgear, and code-driven upgrades.</p>
+            <span class="capability__cta" aria-hidden="true">Learn more →</span>
           </a>
 
           <a class="capability" id="service-plumbing" href="services/plumbing.html">
@@ -2164,6 +2185,7 @@ small, .text-small { font-size: var(--text-sm); }
             </span>
             <h4 class="capability__title">Plumbing</h4>
             <p class="capability__body">Commercial plumbing service, repair, and project work — domestic water, sanitary, gas, and backflow.</p>
+            <span class="capability__cta" aria-hidden="true">Learn more →</span>
           </a>
 
           <a class="capability" id="service-controls" href="services/building-controls.html">
@@ -2172,6 +2194,7 @@ small, .text-small { font-size: var(--text-sm); }
             </span>
             <h4 class="capability__title">Building Controls</h4>
             <p class="capability__body">Design, installation, and integration of building automation systems that reduce operating costs.</p>
+            <span class="capability__cta" aria-hidden="true">Learn more →</span>
           </a>
           
         </div>
