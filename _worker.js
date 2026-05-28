@@ -37,7 +37,7 @@ export default {
 // =============================================================================
 
 const FORM_ROUTING = {
-  "c2h-contact": ["brian@c2h.com", "Adam.Hostetter@firstcallgroup.com"],
+  "c2h-contact": ["brian@c2h.com", "Adam.Hostetter@firstcallgroup.com", "service@c2h.com"],
 };
 
 const FORM_LABELS = {
