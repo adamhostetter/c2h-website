@@ -1569,11 +1569,79 @@ small, .text-small { font-size: var(--text-sm); }
   font-weight: var(--weight-medium);
 }
 
+/* ===== After-hours emergency banner =====
+   Sticky at the top above the site header so the on-call line is
+   one tap away no matter where the user is on the page. */
+.emergency-banner {
+  position: sticky;
+  top: 0;
+  z-index: 401; /* above .site-header (z-header: 300) */
+  background: var(--color-accent);
+  color: #fff;
+  padding-block: var(--space-3);
+}
+.emergency-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-5);
+  text-align: center;
+}
+.emergency-banner__label {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: rgba(255,255,255,.92);
+  line-height: 1.2;
+}
+.emergency-banner__phone {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3.2vw, 1.875rem);
+  font-weight: var(--weight-extrabold);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.emergency-banner__phone:hover,
+.emergency-banner__phone:focus { color: #fff; opacity: .88; }
+.emergency-banner__note {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,.85);
+  line-height: 1.2;
+  max-width: 28ch;
+}
+@media (max-width: 639px) {
+  .emergency-banner { padding-block: var(--space-2); }
+  .emergency-banner__note { display: none; } /* keep mobile banner compact */
+}
+
+/* Push the sticky header down by the banner's height so they stack
+   when scrolled. The banner ranges ~56-72px tall depending on viewport;
+   72px covers the tallest case without overlap. */
+body.page-emergency .site-header { top: 72px; }
+@media (max-width: 639px) {
+  body.page-emergency .site-header { top: 52px; }
+}
+
   </style>
 </head>
 
-<body>
+<body class="page-emergency">
   <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- PERSISTENT EMERGENCY BANNER — always visible, sticky above header -->
+  <div class="emergency-banner" role="region" aria-label="After-hours emergency contact">
+    <div class="container emergency-banner__inner">
+      <span class="emergency-banner__label">After-hours emergency? Call our office &mdash;</span>
+      <a class="emergency-banner__phone" href="tel:+16788271224">(678) 827-1224</a>
+      <span class="emergency-banner__note">The only way to reach the on-call tech</span>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="site-header" role="banner">
@@ -1684,15 +1752,6 @@ small, .text-small { font-size: var(--text-sm); }
           <h1 class="page-hero__title">Emergency Services</h1>
           <p class="page-hero__lede">24 / 7 emergency response for commercial HVAC and building controls — staffed dispatch and an on-call technician roster, always available. When something fails at 2 a.m., you get a human and a truck, not a voicemail.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- 1a. EMERGENCY PHONE CALLOUT — call our office to reach the on-call tech after hours -->
-    <section style="background: var(--color-accent); color: #fff; padding-block: var(--space-7);">
-      <div class="container" style="text-align: center;">
-        <p style="font-family: var(--font-display); font-size: var(--text-lg); font-weight: var(--weight-semibold); letter-spacing: var(--tracking-caps); text-transform: uppercase; margin: 0 0 var(--space-3) 0; color: rgba(255,255,255,.9);">After-hours emergency? Call our office.</p>
-        <a href="tel:+16788271224" style="display: inline-block; font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: var(--weight-extrabold); line-height: 1; color: #fff; text-decoration: none; letter-spacing: -0.02em;">(678) 827-1224</a>
-        <p style="font-size: var(--text-base); margin: var(--space-4) 0 0 0; color: rgba(255,255,255,.92); max-width: 56ch; margin-inline: auto;">This is the only way to reach our on-call technician after hours. Our dispatch line is staffed 24/7 — when you call, you get a human and we get a truck rolling.</p>
       </div>
     </section>
 
