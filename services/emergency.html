@@ -1609,15 +1609,8 @@ small, .text-small { font-size: var(--text-sm); }
 }
 .emergency-banner__phone:hover,
 .emergency-banner__phone:focus { color: #fff; opacity: .88; }
-.emergency-banner__note {
-  font-size: var(--text-xs);
-  color: rgba(255,255,255,.85);
-  line-height: 1.2;
-  max-width: 28ch;
-}
 @media (max-width: 639px) {
   .emergency-banner { padding-block: var(--space-2); }
-  .emergency-banner__note { display: none; } /* keep mobile banner compact */
 }
 
 /* Push the sticky header down by the banner's height so they stack
@@ -1639,7 +1632,6 @@ body.page-emergency .site-header { top: 72px; }
     <div class="container emergency-banner__inner">
       <span class="emergency-banner__label">After-hours emergency? Call our office &mdash;</span>
       <a class="emergency-banner__phone" href="tel:+16788271224">(678) 827-1224</a>
-      <span class="emergency-banner__note">The only way to reach the on-call tech</span>
     </div>
   </div>
 
